@@ -1,0 +1,61 @@
+/* box-sizing =>  é usada para definir o comportamento do tamanho dos elementos*/
+/* content-box => utilizado como padrão para calcular o tamanho dos elementos */
+/*  (*)=> selecionará todo o conteúdo */
+/* border-box=> é o oposto do content-box */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+
+.header {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 32px;
+    background: #0a0a23;
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+
+    display: flex;
+    /* direção esquerda-direita */
+    flex-direction: row;
+    /* ele vai aumentar a quantidade ou diminuir a quantidade de fotos dependendo do tamanho da tela */
+    flex-wrap: wrap;
+    /* fornece espaço de linhas colunas entre as imagens */
+    gap: 16px;
+    /* row-gap: 10px;
+    column-gap:10px; */
+    /* determina como os itens dentro do flex irão se posicionar horizontal*/
+    justify-content: center;
+    /* determina como os itens dentro do flex irão se posicionar transversal*/
+    align-content: center;
+    margin: 0 auto;
+    padding: 20px 10px;
+    max-width: 1400px;
+
+}
+
+.gallery img {
+
+    /* determina como as imagens irão se comportar não deixando disrtocida  */
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.gallery::after{
+    content: "";
+    width: 350px;
+
+}
